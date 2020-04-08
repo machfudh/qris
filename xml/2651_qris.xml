@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merchantinformation_qrcode product="merchantinformation_qrcode">
+  <fields>
+	<field fieldid="00" format="ANS" lengthin="00" lengthout="32" presence="M" name="Globally Unique Identifier" comment="" value="" constant-value="true"/>
+	<field fieldid="01" format="S" lengthin="00" lengthout="99" presence="O" name="Payment network" comment="" value="" constant-value="true"/>
+	<field fieldid="02" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Visa" comment="" value="" constant-value="true"/>
+	<field fieldid="03" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Visa" comment="" value="" constant-value="true"/>
+	<field fieldid="04" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Mastercard" comment="" value="" constant-value="true"/>
+	<field fieldid="05" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Mastercard" comment="" value="" constant-value="true"/>
+	<field fieldid="06" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="07" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="08" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="09" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Discover" comment="" value="" constant-value="true"/>
+	<field fieldid="10" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Discover" comment="" value="" constant-value="true"/>
+	<field fieldid="11" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Amex" comment="" value="" constant-value="true"/>
+	<field fieldid="12" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for Amex" comment="" value="" constant-value="true"/>
+	<field fieldid="13" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for JCB" comment="" value="" constant-value="true"/>
+	<field fieldid="14" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for JCB" comment="" value="" constant-value="true"/>
+	<field fieldid="15" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for UnionPay" comment="" value="" constant-value="true"/>
+	<field fieldid="16" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved for UnionPay" comment="" value="" constant-value="true"/>
+	<field fieldid="17" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="18" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="19" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="20" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="21" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="22" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="23" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="24" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="25" format="ANS" lengthin="00" lengthout="99" presence="O" name="Reserved by EMVCo" comment="" value="" constant-value="true"/>	
+  </fields>
+</merchantinformation_qrcode>

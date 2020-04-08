@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root_qrcode product="root_qrcode">
+  <fields>
+	<field fieldid="00" format="N" lengthin="02" lengthout="02" presence="M" name="Payload Format Indikator" comment="" value="" constant-value="true"/>
+	<field fieldid="01" format="N" lengthin="02" lengthout="02" presence="O" name="Point of Initiation
+Method" comment="" value="" constant-value="true"/>
+	<field fieldid="02" format="ANS" lengthin="00" lengthout="99" presence="M" name="Merchant Account Information" comment="" value="" constant-value="true"/>
+	<field fieldid="51" format="ANS" lengthin="00" lengthout="99" presence="M" name="Merchant Account Information" comment="" value="" constant-value="true"/>
+	<field fieldid="52" format="N" lengthin="04" lengthout="04" presence="M" name="Merchant Category Code" comment="" value="" constant-value="true"/>
+	<field fieldid="53" format="N" lengthin="03" lengthout="03" presence="M" name="Transaction Currency" comment="" value="" constant-value="true"/>
+	<field fieldid="54" format="ANS" lengthin="00" lengthout="13" presence="C" name="Transaction Amount" comment="" value="" constant-value="true"/>
+	<field fieldid="55" format="N" lengthin="02" lengthout="02" presence="O" name="Tip or Convenience Indikator" comment="" value="" constant-value="true"/>
+	<field fieldid="56" format="ANS" lengthin="00" lengthout="13" presence="C" name="Value of Convenience Fee Fixed" comment="" value="" constant-value="true"/>
+	<field fieldid="57" format="ANS" lengthin="00" lengthout="05" presence="C" name="Value of Convenience Fee Percentage" comment="" value="" constant-value="true"/>
+	<field fieldid="58" format="ANS" lengthin="02" lengthout="02" presence="M" name="Country Code" comment="" value="" constant-value="true"/>
+	<field fieldid="59" format="ANS" lengthin="00" lengthout="25" presence="M" name="Merchant Name" comment="" value="" constant-value="true"/>
+	<field fieldid="60" format="ANS" lengthin="00" lengthout="15" presence="M" name="Merchant City" comment="" value="" constant-value="true"/>
+	<field fieldid="61" format="ANS" lengthin="00" lengthout="10" presence="O" name="Postal Code" comment="" value="" constant-value="true"/>
+	<field fieldid="62" format="S" lengthin="00" lengthout="99" presence="0" name="Additional Data Field Template" comment="" value="" constant-value="true"/>
+	<field fieldid="63" format="ANS" lengthin="04" lengthout="04" presence="M" name="CRC" comment="" value="" constant-value="true"/>
+	<field fieldid="64" format="S" lengthin="00" lengthout="99" presence="0" name="Merchant Information Language Template" comment="" value="" constant-value="true"/>	
+  </fields>
+</root_qrcode>

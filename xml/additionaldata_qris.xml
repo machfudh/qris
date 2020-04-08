@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<additionaldata_qrcode product="additionaldata_qrcode">
+  <fields>
+	<field fieldid="01" format="ANS" lengthin="00" lengthout="25" presence="O" name="Bill Number" comment="" value="" constant-value="true"/>
+	<field fieldid="02" format="ANS" lengthin="00" lengthout="25" presence="O" name="Mobile Number" comment="" value="" constant-value="true"/>
+	<field fieldid="03" format="ANS" lengthin="00" lengthout="25" presence="O" name="Store Label" comment="" value="" constant-value="true"/>
+	<field fieldid="04" format="ANS" lengthin="00" lengthout="25" presence="O" name="Loyalty Number" comment="" value="" constant-value="true"/>
+	<field fieldid="05" format="ANS" lengthin="00" lengthout="25" presence="O" name="Reference Label" comment="" value="" constant-value="true"/>
+	<field fieldid="06" format="ANS" lengthin="00" lengthout="25" presence="O" name="Customer Label" comment="" value="" constant-value="true"/>
+	<field fieldid="07" format="ANS" lengthin="00" lengthout="25" presence="O" name="Terminal Label" comment="" value="" constant-value="true"/>
+	<field fieldid="08" format="ANS" lengthin="00" lengthout="25" presence="O" name="Purpose of Transaction" comment="" value="" constant-value="true"/>
+	<field fieldid="09" format="ANS" lengthin="00" lengthout="03" presence="O" name="Additional Consumer Data Request" comment="" value="" constant-value="true"/>
+	<field fieldid="10" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="49" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+  </fields>
+</additionaldata_qrcode>

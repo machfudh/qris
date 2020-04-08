@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<merchantlanguage_qrcode product="merchantlanguage_qrcode">
+  <fields>
+	<field fieldid="00" format="ANS" lengthin="02" lengthout="02" presence="M" name="Language Preference" comment="" value="" constant-value="true"/>
+	<field fieldid="01" format="S" lengthin="00" lengthout="25" presence="M" name="Merchant Name" comment="" value="" constant-value="true"/>
+	<field fieldid="02" format="S" lengthin="00" lengthout="15" presence="O" name="Merchant City" comment="" value="" constant-value="true"/>
+	<field fieldid="03" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="04" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="05" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="06" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="07" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="08" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="09" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="10" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="60" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+	<field fieldid="99" format="S" lengthin="00" lengthout="99" presence="O" name="RFU for EMVCo" comment="" value="" constant-value="true"/>
+  </fields>
+</merchantlanguage_qrcode>
