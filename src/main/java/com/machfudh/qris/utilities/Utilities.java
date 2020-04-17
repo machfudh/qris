@@ -95,23 +95,33 @@ public class Utilities {
         String idPesan = pesan.substring(0, 2).trim();
         int x = 1;
         while (pesan.length() > 0) {
+            
+            int potongPesan = 0;
 
             String idStrPesan = pesan.substring(0, 2).trim();
-            int idIntPesan = Integer.valueOf(pesan.substring(0, 2).trim());
-            int potongPesan = Integer.valueOf(pesan.substring(2, 4).trim());
-           
+//            int idIntPesan = Integer.valueOf(pesan.substring(0, 2).trim());
+            try {
+                potongPesan = Integer.valueOf(pesan.substring(2, 4).trim());
+            } catch (Exception e) {
+                System.out.println("lenghtnin error ["+pesan.substring(2, 4).trim()+"]");
+                xmlfilerstatus = false;
+                datachecksum.result = false;
+                datachecksum.message = "lenghtnin error ["+pesan.substring(2, 4).trim()+"]" ;
+                break;
+            }
+
             for (String lcfilter : xmlfilter) {
-                if( idIntPesan == Integer.valueOf(lcfilter)){
+                if (idStrPesan.equalsIgnoreCase(lcfilter)) {
                     mercInfo = lcfilter;
                     xmlfilerstatus = true;
                     break;
-                    
-                }else{
+
+                } else {
                     xmlfilerstatus = false;
                 }
             }
-            
-            if (idIntPesan == Integer.valueOf(mercInfo) && xmlfilerstatus == true ) {
+
+            if (idStrPesan.equalsIgnoreCase(mercInfo) && xmlfilerstatus == true) {
                 merchentData = new ArrayList<>();
                 datachecksum.data.add(pesan.substring(0, potongPesan + 4));
                 merchentKey = pesan.substring(0, 4);
@@ -135,12 +145,17 @@ public class Utilities {
                         log.info(" checksum ==> " + pesan.substring(0, potongPesan + 4));
                         //isi data list
                         datachecksum.result = true;
-                        datachecksum.message = pesan.substring(0, potongPesan + 4);
+//                        datachecksum.message = pesan.substring(0, potongPesan + 4);
+                        datachecksum.message = "Qris Barcode [ "+pesan.substring(0, potongPesan + 4)+" ]";
                         datachecksum.data.add(pesan.substring(0, potongPesan + 4));
 
                     } else {
                         datachecksum.message = pesan.substring(0, potongPesan + 4);
                         datachecksum.data.add(pesan.substring(0, potongPesan + 4));
+//                        datachecksum.result = false;
+//                        datachecksum.message = "No Qris Barcode";
+//                        datachecksum.data.add(pesan.substring(0, potongPesan + 4));
+//                        return datachecksum;
                     }
                     pesan = pesan.substring(potongPesan + 4, pesan.length());
                 } else {
@@ -178,7 +193,7 @@ public class Utilities {
         return "";
     }
 
-    public Datatoxml cektoqrisxml(String message, int idField) {
+    public Datatoxml cektoqrisxml(String message, String idField) {
 
         Datatoxml datatoxml = new Datatoxml();
         String elementId = "";
@@ -187,34 +202,34 @@ public class Utilities {
         String elementName = "";
         int elementLengthin = 0;
         int elementLengthout = 0;
-        
+
         String mercInfo = "999";
         boolean xmlfilerstatus = false;
 
         String idMessage = message.substring(0, 2).trim();
 
         File fXmlFile;  //= new File(getKey("qris.xml.root")); // default xml
-        
+
         String[] xmlfilter = getKey("qris.xml.filter").split(",");
         String[] xmlfile = getKey("qris.xml.file").split(",");
         String xmlurl = getKey("qris.xml.url");
         String xmllink = "";
-        
-         for (int xx=0; xx<xmlfilter.length; xx++) {
-                if( idField == Integer.valueOf(xmlfilter[xx].trim())){
-                    mercInfo = xmlfilter[xx].trim();
-                    xmllink = xmlurl+xmlfile[xx];
-                    xmlfilerstatus = true;
-//                    System.out.println("xxxCek sub ...:"+ mercInfo+" status :"+ xmlfilerstatus+ "link : "+xmllink);
-                    break;
-                }else{
-                    xmlfilerstatus = false;
-                    xmllink = xmlurl+getKey("qris.xml.root");
-                }
-//           
-            }
 
-            fXmlFile = new File(xmllink);
+        for (int xx = 0; xx < xmlfilter.length; xx++) {
+            if (idField.equalsIgnoreCase(xmlfilter[xx].trim())) {
+                mercInfo = xmlfilter[xx].trim();
+                xmllink = xmlurl + xmlfile[xx];
+                xmlfilerstatus = true;
+//                    System.out.println("xxxCek sub ...:"+ mercInfo+" status :"+ xmlfilerstatus+ "link : "+xmllink);
+                break;
+            } else {
+                xmlfilerstatus = false;
+                xmllink = xmlurl + getKey("qris.xml.root");
+            }
+//           
+        }
+
+        fXmlFile = new File(xmllink);
 
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -270,14 +285,27 @@ public class Utilities {
 
     public Datatoxml checklenghtdata(String message, String format, int lengthin, int lengthout, String presence) {
 
-        Datatoxml datatoxml = new Datatoxml();
         String idMessage = message.substring(0, 2).trim();
-        int sizeMessage = Integer.valueOf(message.substring(2, 4).trim());
         String pesanMessage = message.substring(4, message.length()).trim();
+        int sizeMessage = 0;
 
+        Datatoxml datatoxml = new Datatoxml();
         datatoxml.setResult(Boolean.TRUE);
         datatoxml.setMessage("success parsing ");
         datatoxml.setXmlValue(pesanMessage);
+
+        try {
+            System.out.println("Masuk Try ....");
+            sizeMessage = Integer.valueOf(message.substring(2, 4).trim());
+        } catch (Exception e) {
+            sizeMessage = 0;
+            datatoxml.setResult(Boolean.FALSE);
+            datatoxml.setMessage("Error ... ! ");
+            datatoxml.setXmlValue(pesanMessage);
+            System.out.println(" Kesalahan pada nilai pengambilan pesan ");
+            return datatoxml;
+        }
+//        int sizeMessage = Integer.valueOf(message.substring(2, 4).trim());
 
         if (presence.equalsIgnoreCase("M")) {
             if (pesanMessage.length() == 0) {
